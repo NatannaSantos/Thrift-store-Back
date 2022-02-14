@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import db from "../db.js";
 
 const products = [
@@ -351,12 +352,30 @@ export async function createdProduct(req, res) {
 
 }
 
-export async function getProduct(req,res){
+export async function getProducts(req,res){
     try {
        const products= await db.collection("products").find({}).toArray();
         res.send(products);
 
     } catch (error) {
         res.sendStatus(500);
+    }
+}
+
+export async function getProduct(req, res){
+    try {
+        const product = await db.collection("products").findOne({_id: new ObjectId(req.params.id)});
+        res.send(product);
+    } catch (error) {
+        res.status(500).send(req.params.id);
+    }
+}
+
+export async function checkout(req, res){
+    try {
+        await db.collection("orders").insertOne(req.body);
+        res.status(200).send("Seu pedido foi realizado!");
+    } catch (error) {
+        res.status(500).send("Erro interno");
     }
 }
