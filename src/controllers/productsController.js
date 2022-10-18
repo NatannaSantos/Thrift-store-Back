@@ -328,6 +328,7 @@ const products = [
 export async function createdProduct(req, res) {
     
     const product=req.body;
+    console.log(product);
     try {
         products.map(async product =>
             {
