@@ -321,15 +321,7 @@ const products = [
         type: 'eletronics',
         image: 'https://i.ibb.co/b229nDB/cz-M6-Ly9wa-G90b3-Mu-ZW5qb2-Vp-Lm-Nvb-S5ici9wcm9kd-WN0cy8y-NDM2-NDE2-MS9m-MTNl-Nz-M3-MGQ1-MWI3-Y2-U5.jpg',
         subcategory: 'Console'
-    },
-    {
-        title: 'instax mini 9 + lente macro + case',
-        value: '500',
-        description: 'essa maquininha me acompanhou por muito tempo e registrou muitos momentos lindos da minha vida e está na hora dela conhecer novas memórias!',
-        type: 'eletronics',
-        image: 'https://i.ibb.co/bJvXGqj/cz-M6-Ly9wa-G90b3-Mu-ZW5qb2-Vp-Lm-Nvb-S5ici9wcm9kd-WN0cy8x-MDU1-MTQ4-NC83-OTlk-ZDc4-Mj-Rl-ZTUx-MWZj.jpg',
-        subcategory: 'Câmera'
-    }
+    },    
 
 ]
 
