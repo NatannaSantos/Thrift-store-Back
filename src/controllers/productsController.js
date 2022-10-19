@@ -330,6 +330,7 @@ export async function createdProduct(req, res) {
     const product=req.body;
     console.log(product);
     try {
+        console.log("entrei aqui");
         // products.map(async product =>
         //     {
         //         await db.collection("products").insertOne({ ...product });
@@ -340,7 +341,8 @@ export async function createdProduct(req, res) {
         await db.collection("products").insertOne(product);
         res.sendStatus(200);
     } catch (error) {
-        res.sendStatus(500)
+        res.sendStatus(500);
+        console.log(error);
     }
 
 }
