@@ -341,8 +341,9 @@ export async function createdProduct(req, res) {
         await db.collection("products").insertOne(product);
         res.sendStatus(200);
     } catch (error) {
-        res.sendStatus(500);
         console.log(error);
+        res.sendStatus(500);
+        
     }
 
 }
